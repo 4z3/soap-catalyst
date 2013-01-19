@@ -1,0 +1,16 @@
+{
+  "name": "soap-catalyst",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/4z3/soap-catalyst.git"
+  },
+  "keywords": [
+    "soap",
+    "proxy"
+  ],
+  "dependencies": {
+    "formidable":  "*",
+    "soap": "*"
+  }
+}

@@ -43,17 +43,19 @@ try {
       }
       wsdl_uri = process.argv[3]
   }
-} catch (exn) {
-  console.error('error:', exn.message)
-  console.error('usage: node soap-catalyst [http://{hostname}:{port}] WSDL_FILE')
+} catch (err) {
+  console.error('error:', err.message)
+  console.error('usage: node soap-catalyst [http://HOSTNAME:PORT] WSDL_FILE')
   process.exit(23)
 }
 
-
 log('wsdl_uri:', wsdl_uri)
 log('proxy_uri:', proxy_uri)
-require('soap').createClient(wsdl_uri, function(err, client) {
-  // TODO handle err
+require('soap').createClient(wsdl_uri, function (err, client) {
+  if (err) {
+    console.error('error:', err.message)
+    process.exit(23)
+  }
 
   var listener = require('./proxy').createRequestListener(client)
   var server = require('http').createServer(listener)

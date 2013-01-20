@@ -16,8 +16,8 @@
 
     node soap-catalyst http://localhost:8080 $my_wsdl_file_or_url
   
-  The server will stay in the foreground and print debugging messages to
-  stdout.
+  *Note: The server will print debug messages to stdout.
+  Use another terminal to invoke operations.*
 
 ### Invoke Operations with [cURL](http://curl.haxx.se/)
 

@@ -14,7 +14,7 @@
   Start proxy server to accept requests on
   [http://localhost:8080](http://localhost:8080):
 
-    PORT=8080 node soap-catalyst $my_wsdl_file_or_url
+    node soap-catalyst http://localhost:8080 $my_wsdl_file_or_url
   
   The server will stay in the foreground and print debugging messages to
   stdout.
